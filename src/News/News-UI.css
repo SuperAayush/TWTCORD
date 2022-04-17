@@ -1,0 +1,89 @@
+article.card {
+  width: 280px;
+  height: 350px;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+  overflow: hidden;
+  margin-right:40px;
+}
+
+.thumb .card_image{
+  width: 280px;
+  height: 260px;
+  background-size: cover;
+  border-radius: 3px;
+  object-fit: contain;
+  background:white;
+}
+article.card .infos {
+  width: auto;
+  height: 1000px;
+  padding: 14px 24px;
+  background: rgb(5, 0, 0);
+  transition: 0.4s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+  color:white;
+}
+article.card .infos .title {
+  margin: 10px 0;
+  letter-spacing: 3px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 0px #fff;
+}
+article.card .infos .flag {
+  /* top: 50%; */
+  /* right: 0; */
+  transform: translateY(-50%);
+  width: 35px;
+  height: 23px;
+  background-size: 100% auto;
+  display: inline-block;
+}
+article.card .infos .date, article.card .infos .seats {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+article.card .infos .seats {
+  display: inline-block;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  opacity: 0;
+  transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+article.card .infos .txt {
+  line-height: 2;
+  font-size: 0.95rem;
+  opacity: 0;
+  transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+article.card .infos .details {
+  left: 0;
+  left: 0;
+  bottom: 0;
+  margin: 10px 0;
+  padding: 20px 24px;
+  letter-spacing: 1px;
+  color: #4e958b;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+article.card:hover .infos {
+  transform: translateY(-260px);
+}
+article.card:hover .infos .seats, article.card:hover .infos .txt, article.card:hover .infos .details {
+  opacity: 1;
+}
+.title{
+  background:transparent;
+  color:white;
+  font-weight:900;
+}
+.txt{
+  background:transparent;
+  margin-bottom:200px;  
+}
