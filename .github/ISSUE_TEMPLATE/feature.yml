@@ -28,7 +28,4 @@ body:
         Think about linking existing Issues here!
     validations:
       required: false
-  - type: markdown
-    attributes:
-      value: |
         
