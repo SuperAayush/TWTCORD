@@ -1,0 +1,28 @@
+body {
+    background: black;
+  }
+  
+  .newsCard {
+    width: 20rem;
+  }
+  
+  .newsCard:hover {
+    box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253) !important;
+  }
+  
+  .newsCardContainer {
+    padding: 20rem;
+  }
+  
+  .newsCard-body {
+    padding: 3rem 0 !important;
+  }
+  
+  .newsCard-text {
+    font-size: 0.9rem;
+    padding: 0.4rem 1.9rem;
+  }
+  
+  .newsUI-fluid {
+    padding-top: 3rem !important;
+  }
