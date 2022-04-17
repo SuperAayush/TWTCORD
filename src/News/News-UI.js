@@ -1,24 +1,22 @@
 import React from "react";
 import "./News-UI.css";
 
-const NewsUI = ({ title, info, link, rating, image }) => {
-
+const NewsUI = (props) => {
   return (
-    <div className="newsUI-fluid">
-      <div className="newsCard newsCard-body text-center">
-        <div className="overflow">
-          <img src={image} alt="Image1" className="newsCard-img-top" />
+    <div className="card-container">
+    <a href={props.link}>
+      <article className="card">
+        <div className="thumb">
+         <img  className="card_image" src={props.image} alt="" />
         </div>
-        <div card-body text-dark>
-          <h4 className="newsCard-title">{title}</h4>
-          <p className="newsCard-text text-secondary">{info}</p>
-          <a href={link} className="btn btn-outline-success">
-            Join Now
-          </a>
-        </div>
-      </div>
+          <div className="infos">
+           <h2 className="title">{props.title}</h2>
+        <p className="txt">{props.info}</p>
+    </div>
+</article>
+</a>
     </div>
   );
-};
+}
 
 export default NewsUI;
