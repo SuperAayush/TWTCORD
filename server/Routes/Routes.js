@@ -1,6 +1,6 @@
 import express from "express";
 import Post from "../Schema/test.js";
-import { getFeeds } from "../Controllers/feeds.js";
+import { createFeeds, getFeeds } from "../Controllers/feeds.js";
 
 const Router = express.Router();
 
@@ -16,6 +16,7 @@ Router.post("/check", async (req, res) => {
   }
 });
 
-Router.get("/", getFeeds);
+Router.get("/feeds", getFeeds);
+Router.post("/feeds", createFeeds);
 
 export default Router;

@@ -7,7 +7,7 @@ const FeedSchema = new mongoose.Schema({
   },
   dp: {
     type: String,
-    required: true,
+    // required: true,
   },
   message: {
     type: String,
@@ -21,15 +21,14 @@ const FeedSchema = new mongoose.Schema({
     default: 0,
   },
   comment: {
-    type: String,
-    default: [],
+    type: [String],
   },
   dateCreated: {
     type: Date,
     default: new Date(),
   },
   tags: {
-    type: String,
+    type: [String],
     required: true,
   },
 });
