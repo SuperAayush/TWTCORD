@@ -7,7 +7,6 @@ const FeedSchema = new mongoose.Schema({
   },
   dp: {
     type: String,
-    // required: true,
   },
   message: {
     type: String,

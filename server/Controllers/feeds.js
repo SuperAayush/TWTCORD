@@ -1,6 +1,7 @@
 import Feeds from "../Schema/feeds.js";
 
 export const getFeeds = async (req, res) => {
+  //Creating a getFeeds function to fetch data database
   try {
     const AllFeeds = await Feeds.find();
 
@@ -11,12 +12,13 @@ export const getFeeds = async (req, res) => {
 };
 
 export const createFeeds = async (req, res) => {
+  //Pushing post data to the Database
   const feeds = req.body;
   const newFeed = new Feeds(feeds);
   console.log(feeds);
 
   try {
-    await newFeed.save();
+    await newFeed.save(); //saving data in Azure
     res.status(201).json(newFeed);
   } catch (error) {
     res.status(409).json({ message: error.message });
