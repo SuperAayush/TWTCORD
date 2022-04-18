@@ -1,0 +1,14 @@
+.card-main{
+    margin-top:80px;
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card-ch{
+    margin-top:120px;
+  }
+  
+  .card-c{
+    margin-top:15px;
+  }
