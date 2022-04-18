@@ -56,9 +56,9 @@ Router.get("/feeds", getFeeds);
 Router.post("/feeds", createFeeds);
 
 //Server Routes
-Router.get("/createserver", createServer);
+Router.post("/createserver", createServer);
 
 //Channel Routes
-Router.get("/createchannel", createChannel);
+Router.post("/createchannel", createChannel);
 
 export default Router;
