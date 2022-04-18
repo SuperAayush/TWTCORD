@@ -6,7 +6,7 @@ const connection = async (URL) => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log("Connected To MongoDb");
+    console.log("Connected To Azure");
   } catch (error) {
     console.log("Error While Connecting to MongoDb", error);
   }

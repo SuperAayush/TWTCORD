@@ -1,14 +1,11 @@
 import express from "express";
 import Post from "../Schema/test.js";
+import { createFeeds, getFeeds } from "../Controllers/feeds.js";
 
 const Router = express.Router();
 
-let allpost;
-
 Router.post("/check", async (req, res) => {
   try {
-    allpost = await req.body;
-
     console.log(req.body);
     const data = await new Post(req.body);
 
@@ -18,5 +15,8 @@ Router.post("/check", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+Router.get("/feeds", getFeeds);
+Router.post("/feeds", createFeeds);
 
 export default Router;
