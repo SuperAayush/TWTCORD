@@ -6,8 +6,7 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 const app = express();
 
-
-dotenv.config({path:'./.env'});
+dotenv.config({ path: "./.env" });
 
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -16,12 +15,12 @@ app.use(cookieParser());
 
 const URL = process.env.AZURE_URL;
 
-const PORT=process.env.PORT;
+const PORT = process.env.PORT;
 
 app.use("/", Router);
 
-app.listen(PORT, ()=> {
-    console.log(`server is running at port ${PORT}`);
-})
+app.listen(PORT, () => {
+  console.log(`server is running at port ${PORT}`);
+});
 
 connection(URL);
