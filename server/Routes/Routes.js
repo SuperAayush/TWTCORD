@@ -1,6 +1,7 @@
 import express from "express";
 import Post from "../Schema/test.js"; 
 import User from "../Schema/userSchema.js";
+import { createFeeds, getFeeds } from "../Controllers/feeds.js";
 
 const Router = express.Router();
 
@@ -8,10 +9,10 @@ const Router = express.Router();
 // eslint-disable-next-line no-unused-vars
 let allpost;
 
+
+
 Router.post("/check", async (req, res) => {
   try {
-    allpost = await req.body;
-
     console.log(req.body);
     const data = await new Post(req.body);
 
@@ -22,8 +23,10 @@ Router.post("/check", async (req, res) => {
   }
 });
 
+
+// route for registring a user
+
 Router.post('/register', async (req,res) => {
-    console.log('inside register');
     
     const userDetails = req.body;
 
@@ -49,5 +52,7 @@ Router.post('/register', async (req,res) => {
         console.log(err)
     }
 });
+Router.get("/feeds", getFeeds);
+Router.post("/feeds", createFeeds);
 
 export default Router;

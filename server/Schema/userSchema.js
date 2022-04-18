@@ -55,6 +55,8 @@ const userSchema = new mongoose.Schema({
 });
 
 
+//passwords converts using hashing into combinations of letters and numbers using bcrypt
+
 userSchema.pre('save',async function(next) {
     if(this.isModified('password')) {
         this.password = await bcrypt.hash(this.password, 12);
@@ -63,6 +65,9 @@ userSchema.pre('save',async function(next) {
     }
     next();
 });
+
+
+//finds user by token
 
 userSchema.methods.generateAuthToken = async function(){
     try{
