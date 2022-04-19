@@ -2,7 +2,7 @@ import express from "express";
 import Post from "../Schema/test.js"; 
 import User from "../Schema/userSchema.js";
 import { createFeeds, getFeeds } from "../Controllers/feeds.js";
-
+const { addMessage, getMessages } = require("../controllers/messageController");
 const Router = express.Router();
 
 
@@ -52,7 +52,15 @@ Router.post('/register', async (req,res) => {
         console.log(err)
     }
 });
+
+// Feeds 
+
 Router.get("/feeds", getFeeds);
 Router.post("/feeds", createFeeds);
+
+// Add messages for receiver and sender 
+
+Router.post("/addmsg/", addMessage); 
+Router.post("/getmsg/", getMessages);
 
 export default Router;
