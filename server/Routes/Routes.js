@@ -2,7 +2,7 @@ import express from "express";
 import Post from "../Schema/test.js";
 import User from "../Schema/userSchema.js";
 import { createFeeds, getFeeds } from "../Controllers/feeds.js";
-const { addMessage, getMessages } = require("../controllers/messageController");
+import { addMessage, getMessages } from "../controllers/messageController";
 import {
   createChannel,
   createServer,
