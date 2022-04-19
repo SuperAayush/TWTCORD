@@ -8,8 +8,7 @@ import cookieParser from "cookie-parser";
 const socket = require("socket.io");
 const app = express();
 
-
-dotenv.config({path:'./.env'});
+dotenv.config({ path: "./.env" });
 
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -27,7 +26,6 @@ const server = app.listen(process.env.PORT, () =>
 );
 
 // Socket setup
-
 const io = socket(server, {
     cors: {
       origin: "http://localhost:3000",
