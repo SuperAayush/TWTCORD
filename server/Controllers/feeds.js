@@ -14,11 +14,11 @@ export const getFeeds = async (req, res) => {
 export const createFeeds = async (req, res) => {
   //Pushing post data to the Database
   const feeds = req.body;
-  const newFeed = new Feeds(feeds);
+  const newFeed = await new Feeds(feeds);
   console.log(feeds);
 
   try {
-    await newFeed.save(); //saving data in Azure
+    newFeed.save(); //saving data in Azure
     res.status(201).json(newFeed);
   } catch (error) {
     res.status(409).json({ message: error.message });
