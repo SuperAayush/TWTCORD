@@ -2,6 +2,7 @@ import express from "express";
 import Post from "../Schema/test.js";
 import User from "../Schema/userSchema.js";
 import { createFeeds, getFeeds } from "../Controllers/feeds.js";
+import { addMessage, getMessages } from "../controllers/messageController";
 import {
   createChannel,
   createServer,
@@ -51,6 +52,15 @@ Router.post("/register", async (req, res) => {
   }
 });
 
+
+// Feeds 
+Router.get("/feeds", getFeeds);
+Router.post("/feeds", createFeeds);
+
+// Add messages for receiver and sender 
+Router.post("/addmsg/", addMessage); 
+Router.post("/getmsg/", getMessages);
+
 //Feeds Routes
 Router.get("/feeds", getFeeds);
 Router.post("/feeds", createFeeds);
@@ -60,5 +70,6 @@ Router.post("/createserver", createServer);
 
 //Channel Routes
 Router.post("/createchannel", createChannel);
+
 
 export default Router;
