@@ -1,3 +1,4 @@
+//Testing file for socket.io at client side.
 import React from 'react'
 
 const chat = () => {
