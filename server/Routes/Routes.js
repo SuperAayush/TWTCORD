@@ -4,6 +4,7 @@ import authenticate from "../middleware/authenticate.js";
 import { createFeeds, getFeeds } from "../Controllers/feeds.js";
 import signIn from "../Controllers/signIn.js";
 import register from "../Controllers/register.js";
+import { addMessage, getMessages } from "../controllers/messageController";
 import {
   createChannel,
   createServer,
@@ -39,6 +40,15 @@ Router.get('/checking', authenticate, (req, res)=>{
     res.send(req.rootUser);
 });
 
+
+// Feeds 
+Router.get("/feeds", getFeeds);
+Router.post("/feeds", createFeeds);
+
+// Add messages for receiver and sender 
+Router.post("/addmsg/", addMessage); 
+Router.post("/getmsg/", getMessages);
+
 //Feeds Routes
 Router.get("/feeds", getFeeds);
 Router.post("/feeds", createFeeds);
@@ -48,5 +58,6 @@ Router.post("/createserver", createServer);
 
 //Channel Routes
 Router.post("/createchannel", createChannel);
+
 
 export default Router;
