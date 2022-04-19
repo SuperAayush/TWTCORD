@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react'
 import {useHistory} from 'react-router-dom'
 
+//file for checking that the middleware is working
+
 const Checking = () => {
 
   const history = useHistory();

@@ -2,6 +2,7 @@ import jwt from "jsonwebtoken";
 import User from '../Schema/userSchema.js';
 
 
+//for authentication purpose verification of user generated token and token stored in cookies are taking place
 
 const authenticate = async (req, res, next) => {
     try {
