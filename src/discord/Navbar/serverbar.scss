@@ -1,0 +1,22 @@
+.serverbar {
+  display: flex;
+  background-color: #f2f3f5;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  height: auto;
+
+  .centerbar {
+    display: flex;
+    width: 50%;
+
+    .rec.rec-arrow {
+      border-radius: 0;
+    }
+
+    .server {
+      margin-right: 20px;
+    }
+  }
+}
