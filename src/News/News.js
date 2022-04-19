@@ -13,6 +13,7 @@ axios.get("https://newsdata.io/api/1/news?apikey=pub_65940dd47f8c725cf5ef39fa683
 
   return (
     <div>
+    Newsssssssss
     {news.map((val) => (
         <div>
             <NewsUI 
