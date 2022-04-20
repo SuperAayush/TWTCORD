@@ -4,10 +4,9 @@ import Router from "./Routes/Routes.js";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
+import { Server } from 'socket.io'; 
 
-const socket = require("socket.io");
 const app = express();
-
 
 dotenv.config({path:'./.env'});
 
@@ -22,17 +21,16 @@ const PORT =process.env.PORT || 8000;
 
 app.use("/", Router);
 
+
 const server = app.listen(process.env.PORT, () =>
   console.log(`Server started on ${process.env.PORT}`)
 );
 
 // Socket setup
+const io = new Server(server, { cors: { origin: '*' } });
+io.on('connection', (socket) => {
+  console.log('Connection established');
+});
 
-const io = socket(server, {
-    cors: {
-      origin: "http://localhost:3000",
-      credentials: true,
-    },
-  });
   
 connection(URL);
