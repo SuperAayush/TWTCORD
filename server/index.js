@@ -22,8 +22,8 @@ const PORT =process.env.PORT || 8000;
 app.use("/", Router);
 
 
-const server = app.listen(process.env.PORT, () =>
-  console.log(`Server started on ${process.env.PORT}`)
+const server = app.listen(PORT, () =>
+  console.log(`Server started on ${PORT}`)
 );
 
 // Socket setup
