@@ -7,7 +7,12 @@ const ServerBar = () => {
   return (
     <div className="serverbar">
       <div className="centerbar">
-        <Carousel itemsToShow={9} showEmptySlots={false} pagination={false}>
+        <Carousel
+          itemsToShow={9}
+          showEmptySlots={false}
+          pagination={false}
+          enableMouseSwipe={true}
+        >
           <ServerProfile />
           <ServerProfile />
           <ServerProfile />
