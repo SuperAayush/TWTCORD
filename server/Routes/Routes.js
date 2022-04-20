@@ -2,7 +2,9 @@ import express from "express";
 import Post from "../Schema/test.js";
 import User from "../Schema/userSchema.js";
 import { createFeeds, getFeeds } from "../Controllers/feeds.js";
-import { addMessage, getMessages } from "../controllers/messageController";
+import  { addMessage, getMessages } from "../Controllers/messageController.js";
+
+
 import {
   createChannel,
   createServer,
