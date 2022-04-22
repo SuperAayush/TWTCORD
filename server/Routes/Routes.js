@@ -4,7 +4,7 @@ import authenticate from "../middleware/authenticate.js";
 import { createFeeds, getFeeds } from "../Controllers/feeds.js";
 import signIn from "../Controllers/signIn.js";
 import register from "../Controllers/register.js";
-import { addMessage, getMessages } from "../controllers/messageController";
+import { addMessage, getMessages } from "../Controllers/messageController.js";
 import {
   createChannel,
   createServer,
