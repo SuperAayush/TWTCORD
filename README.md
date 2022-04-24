@@ -1,72 +1,24 @@
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://superaayush-twtcord-5pgnrg0vtmu.ws-us34.gitpod.io/)
 
-# Getting Started with Create React App 
+# TWTCORD 
+## Connect your cords through **TWTCORD**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# What is TWTCORD? 
 
-## Available Scripts
+TWTCORD is derived from the combination of **twitter and discord**. It is basically the fusion where one can **"connect their cords"**.
 
-In the project directory, you can run:
+## `Some Key Features`
 
-### `npm start`
+1. Chat with your friends. Hurrah! You can always be in your chat mode.
+2. Creating personal groups or servers where one can hang out or also stream their screen.
+3. Not only just we limited to chat, but We also have a voice and video call option as well so that you always feel connected with your loved ones.
+4. We live in the 21st century above all world is growing or developing at its rapidly high speed in order to make ourself updates, We have a new feature where you can read daily news.
+5. Coding is super cool when we have some jazzy feats and dope-shop songs, for that We have a special music player integrated with this. Refreshment increases our productivity and music is as good for our soul and body.
+6. Need some random regular jokes and quotes in order to keep your stomach full of laughter and your mind and heart full of encouraging and inspiring quotes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## `FrontEnd Tech Stack`
+ReactJS, Redux, Material-UI, React-elastic-carousel
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## `BackEnd Tech Stack`
+NodeJS, Azure, CosmosDB, ExpressJs
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
