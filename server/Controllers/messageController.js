@@ -1,5 +1,5 @@
 //Messages added in DataBase
-import Messages from "../models/messageModel";
+import  Messages from  "../schema/messageSchema.js";
 
 export const getMessages = async (req, res, next) => {
   try {

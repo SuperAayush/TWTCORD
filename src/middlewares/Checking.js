@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react'
-import {useHistory} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 //file for checking that the middleware is working
 
 const Checking = () => {
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const callCheckingPage = async () => {
       try {
@@ -26,7 +26,7 @@ const Checking = () => {
 
       } catch (err) {
           console.error(err);
-          history.push("/news");
+          navigate("/news"); //if the middleware is not working, the user will be redirected to the news page
       }
   }
 
