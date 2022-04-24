@@ -22,3 +22,12 @@ export const createChannel = async (req, res) => {
     res.status(500).json(err);
   }
 };
+
+export const GetServer = async (req, res) => {
+  try {
+    const response = await Servers.find();
+    res.status(200).json(response);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+};

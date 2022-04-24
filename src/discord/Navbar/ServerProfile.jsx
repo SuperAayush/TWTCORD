@@ -1,7 +1,8 @@
 import React from "react";
 import "./serverprofile.scss";
 
-const ServerProfile = () => {
+const ServerProfile = (server) => {
+  //to get images use server.server.serverProfile
   return (
     <div className="profile">
       <img

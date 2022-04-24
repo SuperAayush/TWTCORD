@@ -7,8 +7,8 @@ const App = () => {
     <>
       <Router>
         <Switch>
-          <Route path="/news" exact component={News} />
-          <Route path="/serverbar" exact component={ServerBar} />
+          <Route path="/news" exact element={News} />
+          <Route path="/serverbar" exact element={ServerBar} />
         </Switch>
       </Router>
     </>

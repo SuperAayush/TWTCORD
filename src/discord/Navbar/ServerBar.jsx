@@ -2,8 +2,23 @@ import ServerProfile from "./ServerProfile";
 import Carousel from "react-elastic-carousel";
 import SearchIcon from "@mui/icons-material/Search";
 import "./serverbar.scss";
+import { useEffect, useState } from "react";
+
+import { getServer } from "./API/API.js";
 
 const ServerBar = () => {
+  const [Servers, setServers] = useState([]);
+
+  const length = Servers.length;
+
+  useEffect(() => {
+    const getservers = async () => {
+      const res = await getServer();
+      setServers(res);
+    };
+    getservers();
+  }, []);
+
   return (
     <div className="serverbar">
       <div className="centerbar">
@@ -13,31 +28,9 @@ const ServerBar = () => {
           pagination={false}
           enableMouseSwipe={true}
         >
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
-          <ServerProfile />
+          {Servers.map((server, index) => {
+            return <ServerProfile server={server} key={index} />;
+          })}
         </Carousel>
       </div>
 
