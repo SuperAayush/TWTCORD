@@ -1,16 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Routes, Route } from "react-router-dom";
 import ServerBar from "./discord/Navbar/ServerBar";
 import News from "./News/News";
+import Checking from "./middlewares/Checking";
 const App = () => {
   return (
     <>
-      <Router>
-        <Switch>
-          <Route path="/news" exact element={News} />
-          <Route path="/serverbar" exact element={ServerBar} />
-        </Switch>
-      </Router>
+      <Routes>
+        <Route path="/news" exact component={News} />
+        <Route path="/checking" exact component={Checking} />
+        <Route path="/serverbar" exact component={ServerBar} />
+      </Routes>
     </>
   );
 };

@@ -1,9 +1,10 @@
 import express from "express";
 import Post from "../Schema/test.js";
-import User from "../Schema/userSchema.js";
+import authenticate from "../middleware/authenticate.js";
 import { createFeeds, getFeeds } from "../Controllers/feeds.js";
+import signIn from "../Controllers/signIn.js";
+import register from "../Controllers/register.js";
 import { addMessage, getMessages } from "../Controllers/messageController.js";
-
 import {
   createChannel,
   createServer,
@@ -28,30 +29,14 @@ Router.post("/check", async (req, res) => {
 });
 
 // route for registring a user
+Router.post("/register", register);
 
-Router.post("/register", async (req, res) => {
-  const userDetails = req.body;
+// route for login using username or email
+Router.post("/signin", signIn);
 
-  try {
-    const userExist = await User.findOne({ email: userDetails.email });
-    const userNameExist = await User.findOne({
-      username: userDetails.username,
-    });
-
-    if (userExist) {
-      return res.status(422).json({ error: "*user already exists" });
-    } else if (userNameExist) {
-      return res.status(422).json({ error: "*username already exists" });
-    } else if (userDetails.password !== userDetails.cpassword) {
-      return res.status(422).json({ error: "*password are not matching" });
-    } else {
-      const user = new User(userDetails);
-      await user.save();
-      res.status(201).json({ message: "User Registered successfully" });
-    }
-  } catch (err) {
-    console.log(err);
-  }
+//route for checking, that the user is logged in or not
+Router.get("/checking", authenticate, (req, res) => {
+  res.send(req.rootUser);
 });
 
 // Feeds
