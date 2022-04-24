@@ -1,5 +1,5 @@
 import express from "express";
-import Post from "../Schema/test.js"; 
+import Post from "../Schema/test.js";
 import authenticate from "../middleware/authenticate.js";
 import { createFeeds, getFeeds } from "../Controllers/feeds.js";
 import signIn from "../Controllers/signIn.js";
@@ -8,8 +8,8 @@ import { addMessage, getMessages } from "../Controllers/messageController.js";
 import {
   createChannel,
   createServer,
+  GetServer,
 } from "../Controllers/serverControllers.js";
-
 
 const Router = express.Router();
 
@@ -34,19 +34,17 @@ Router.post("/register", register);
 // route for login using username or email
 Router.post("/signin", signIn);
 
-
 //route for checking, that the user is logged in or not
-Router.get('/checking', authenticate, (req, res)=>{
-    res.send(req.rootUser);
+Router.get("/checking", authenticate, (req, res) => {
+  res.send(req.rootUser);
 });
 
-
-// Feeds 
+// Feeds
 Router.get("/feeds", getFeeds);
 Router.post("/feeds", createFeeds);
 
-// Add messages for receiver and sender 
-Router.post("/addmsg/", addMessage); 
+// Add messages for receiver and sender
+Router.post("/addmsg/", addMessage);
 Router.post("/getmsg/", getMessages);
 
 //Feeds Routes
@@ -56,8 +54,9 @@ Router.post("/feeds", createFeeds);
 //Server Routes
 Router.post("/createserver", createServer);
 
+Router.get("/getserver", GetServer);
+
 //Channel Routes
 Router.post("/createchannel", createChannel);
-
 
 export default Router;
