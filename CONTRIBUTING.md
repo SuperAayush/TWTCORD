@@ -90,7 +90,7 @@ git push origin YourBranchName
 
 **9.** Create a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)!
 
-**10.** **Congratulations!** You've made your first contribution to [**LinkFree**](https://github.com/SuperAayush/TWTCORD/graphs/contributors)! 
+**10.** **Congratulations!** You've made your first contribution to [**TWTCORD**](https://github.com/SuperAayush/TWTCORD/graphs/contributors)! 
 
 **_:trophy: After this, the maintainers will review the PR and will merge it if it helps move the LinkFree project forward. Otherwise, it will be given constructive feedback and suggestions for the changes needed to add the PR to the codebase._**
 
