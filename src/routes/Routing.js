@@ -5,7 +5,7 @@ import ServerBar from '../discord/Navbar/ServerBar'
 import Checking from '../middlewares/Checking'
 import News from '../News/News'
 
-function Redirect({to}){
+const Redirect=({to})=>{
   const navigate=useNavigate()
   useEffect(()=>{
     navigate(to)
@@ -14,7 +14,7 @@ function Redirect({to}){
   return;
 }
 
-function Routing() {
+const Routing=()=>{
   return (
     <>
       <Routes>
