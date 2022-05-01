@@ -9,6 +9,7 @@ import { getServer } from "./API/API.js";
 const ServerBar = () => {
   const [Servers, setServers] = useState([]);
 
+  // eslint-disable-next-line no-unused-vars
   const length = Servers.length;
 
   useEffect(() => {
