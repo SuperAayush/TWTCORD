@@ -5,10 +5,7 @@ const ServerProfile = (server) => {
   //to get images use server.server.serverProfile
   return (
     <div className="profile">
-      <img
-        src="https://www.grovenetworks.com/images/easyblog_shared/July_2018/7-4-18/b2ap3_large_totw_network_profile_400.jpg"
-        alt="serverProfile"
-      />
+      <img src={server.server.serverProfile} alt="serverProfile" />
     </div>
   );
 };

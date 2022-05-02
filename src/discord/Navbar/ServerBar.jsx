@@ -1,6 +1,7 @@
 import ServerProfile from "./ServerProfile";
 import Carousel from "react-elastic-carousel";
 import SearchIcon from "@mui/icons-material/Search";
+import AddIcon from "@mui/icons-material/Add";
 import "./serverbar.scss";
 import { useEffect, useState } from "react";
 
@@ -8,8 +9,6 @@ import { getServer } from "./API/API.js";
 
 const ServerBar = () => {
   const [Servers, setServers] = useState([]);
-
-  const length = Servers.length;
 
   useEffect(() => {
     const getservers = async () => {
@@ -19,18 +18,29 @@ const ServerBar = () => {
     getservers();
   }, []);
 
+  const breakPoints = [
+    { width: 500, itemsToShow: 4 },
+    { width: 768, itemsToShow: 5, showArrows: false },
+    { width: 1400, itemsToShow: 7 },
+  ];
+
   return (
     <div className="serverbar">
       <div className="centerbar">
         <Carousel
-          itemsToShow={9}
-          showEmptySlots={false}
           pagination={false}
-          enableMouseSwipe={true}
+          breakPoints={breakPoints}
+          className="caraousel"
         >
           {Servers.map((server, index) => {
-            return <ServerProfile server={server} key={index} />;
+            return (
+              <ServerProfile server={server} key={index} className="tooltip" />
+            );
           })}
+
+          <div className="addserver">
+            <AddIcon />
+          </div>
         </Carousel>
       </div>
 

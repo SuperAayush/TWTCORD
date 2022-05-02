@@ -13,8 +13,24 @@
     width: 50%;
     align-items: center;
 
-    .server {
-      margin-right: 20px;
+    @media screen and (max-width: 850px) {
+      width: 80%;
+      align-items: center;
+    }
+    .caraousel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .addserver {
+        background-color: #e3e0ef;
+        padding: 10px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+        cursor: pointer;
+      }
     }
   }
 
@@ -22,11 +38,20 @@
     display: flex;
     align-items: center;
 
+    @media screen and (max-width: 850px) {
+      display: none;
+    }
+
     img {
       height: 40px;
       margin-left: 20px;
       border-radius: 50%;
       border: 2px solid #1877f2;
+      cursor: pointer;
     }
+  }
+
+  .rec-item-wrapper {
+    width: auto !important;
   }
 }
