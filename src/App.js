@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import { Routes, Route } from "react-router-dom";
 import ServerBar from "./discord/Navbar/ServerBar";
 import News from "./News/News";
@@ -13,6 +14,14 @@ const App = () => {
         <Route path="/serverbar" exact element={<ServerBar />} />
         <Route path="/createserver" exact element={<ServerModel />} />
       </Routes>
+=======
+import Routing from "./routes/Routing";
+
+const App = () => {
+  return (
+    <>
+      <Routing />
+>>>>>>> origin/main
     </>
   );
 };
