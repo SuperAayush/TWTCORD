@@ -2,10 +2,10 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   background-color: white;
   position: fixed;
-  top: 20vh;
-  left: 30%;
-  width: 35%;
+
+  width: 50%;
   background-color: white;
+  transform: translate(calc(50vw - 50%), calc(50vh - 50%));
 
   border-radius: 14px;
   z-index: 30;
@@ -14,6 +14,7 @@
   .main {
     text-align: center;
     padding: 1rem;
+    cursor: default;
 
     .heading {
       font-size: 24px;
@@ -82,6 +83,7 @@
 
       span {
         color: rgb(28, 28, 232);
+        cursor: pointer;
       }
     }
   }
@@ -93,23 +95,24 @@
     padding: 10px 20px;
     align-items: center;
     margin-top: 5px;
-    border-radius: 14px;
+
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
 
     .text {
       font-size: 12;
+      cursor: pointer;
     }
   }
 
   @media screen and (max-width: 916px) {
     width: 70%;
-    top: 0;
-    left: 0;
+
     transform: translate(calc(50vw - 50%), calc(50vh - 50%));
   }
 
   @media screen and (max-width: 450px) {
-    width: 80%;
-
+    width: 90%;
     transform: translate(calc(50vw - 50%), calc(50vh - 50%));
   }
 }

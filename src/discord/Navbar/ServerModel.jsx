@@ -1,8 +1,16 @@
 import { Button, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import "./Model.scss";
 
 const ServerModel = () => {
+  const [Details, setDetails] = useState({});
+
+  const InputHandler = (e) => {
+    setDetails({ serverName: e.target.value });
+  };
+
+  console.log(Details);
+
   return (
     <div className="overlay">
       <div className="container ">
@@ -27,7 +35,11 @@ const ServerModel = () => {
 
           <div className="form">
             <label htmlFor="server-name">SERVER NAME</label>
-            <input placeholder="User's Server" id="server-name"></input>
+            <input
+              placeholder="User's Server"
+              id="server-name"
+              onChange={InputHandler}
+            ></input>
           </div>
 
           <Typography className="guidelines">
