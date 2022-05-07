@@ -1,7 +1,11 @@
 .profile {
+  cursor: pointer;
+
   img {
     height: 40px;
-    border-radius: 50%;
+
+    border-radius: 75%;
     margin: 5px 10px;
+    object-fit: contain;
   }
 }
